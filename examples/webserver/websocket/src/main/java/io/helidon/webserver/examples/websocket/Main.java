@@ -50,7 +50,7 @@ public class Main {
                 .register("/rest", new MessageQueueService())
                 .register("/websocket",
                         TyrusSupport.builder().register(
-                                ServerEndpointConfig.Builder.create(MessageBoardEndpoint.class, "/board")
+                                ServerEndpointConfig.Builder.create(RSocketEndpoint.class, "/board")
                                         .encoders(encoders).build())
                                 .build())
                 .register("/web", StaticContentSupport.builder("/WEB").build())

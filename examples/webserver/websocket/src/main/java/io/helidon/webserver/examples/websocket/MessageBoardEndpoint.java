@@ -38,16 +38,7 @@ public class MessageBoardEndpoint extends Endpoint {
         session.addMessageHandler(new MessageHandler.Whole<String>() {
             @Override
             public void onMessage(String message) {
-                try {
-                    // Send all messages in the queue
-                    if (message.equals("SEND")) {
-                        while (!messageQueue.isEmpty()) {
-                            session.getBasicRemote().sendObject(messageQueue.pop());
-                        }
-                    }
-                } catch (Exception e) {
-                    LOGGER.info(e.getMessage());
-                }
+                System.out.println(message);
             }
         });
     }

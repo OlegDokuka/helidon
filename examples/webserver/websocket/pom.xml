@@ -53,6 +53,11 @@
             <artifactId>helidon-webserver-tyrus</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.rsocket</groupId>
+            <artifactId>rsocket-core</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
             <groupId>jakarta.inject</groupId>
             <artifactId>jakarta.inject-api</artifactId>
             <scope>test</scope>
